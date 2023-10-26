@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Banking System</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Banking System</h1>
+
+        <!-- Signup Form (Initially visible) -->
+        <div id="signupForm" class="form-container">
+            <h2>Signup</h2>
+            <div class="input-group">
+                <label for="signupUsername">Username:</label>
+                <input type="text" id="signupUsername" class="input-field">
+            </div>
+            <div class="input-group">
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" class="input-field">
+            </div>
+            <button onclick="signup()" class="btn">Signup</button>
+            <p>Already registered? <span class="link" onclick="showLoginForm()">Login</span></p>
+        </div>
+
+        <!-- Login Form (Initially hidden) -->
+        <div id="loginForm" class="form-container" style="display: none;">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" class="input-field">
+            </div>
+            <div class="input-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" class="input-field">
+            </div>
+            <button onclick="login()" class="btn">Login</button>
+        </div>
+
+        <!-- User Account Page (Initially hidden) -->
+        <div id="accountPage" class="account-container" style="display: none;">
+            <h2>Welcome, <span id="loggedInUsername"></span>!</h2>
+            <div class="balance">
+                <h3>Account Balance:</h3>
+                <span id="balanceAmount">$0.00</span>
+            </div>
+            <div class="transactions">
+                <h3>Transaction History:</h3>
+                <ul id="transactionList"></ul>
+            </div>
+            <div class="input-group">
+                <label for="depositAmount">Deposit Amount:</label>
+                <input type="number" id="depositAmount" class="input-field">
+                <button onclick="deposit()" class="btn">Deposit</button>
+            </div>
+            <div class="input-group">
+                <label for="withdrawAmount">Withdraw Amount:</label>
+                <input type="number" id="withdrawAmount" class="input-field">
+                <button onclick="withdraw()" class="btn">Withdraw</button>
+            </div>
+            <button onclick="logout()" class="btn logout-btn">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
