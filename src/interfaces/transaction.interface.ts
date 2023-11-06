@@ -4,6 +4,4 @@ interface Transaction {
     amount: number;
     timestamp: Date;
 }
-
-
 export default Transaction;

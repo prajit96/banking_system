@@ -1,4 +1,3 @@
-// main.ts
 import BankAccount from "./classes/bank-account.class";
 
 const myAccount = new BankAccount("1234567890", "John Doe");
